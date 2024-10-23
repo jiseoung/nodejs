@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req,res) => {
-    res.send('address list : ["/", "/hi"]');
+    res.send('path list : ["/", "/hi"]');
 })
 
 app.get('/hi', (req,res) => {
@@ -16,10 +16,10 @@ app.get('/hi', (req,res) => {
                 res.send('/hi?user=user');
         }
         else if (user == 'admin') {
-                res.send('hi ' + user + ' [secret address : /secret]');
-        } 
+            res.send('<h1>hi ' + user + '</h1><br><br>[secret address : /secret]');
+        }
         else {
-                res.send('hi ' + user);
+            res.send('<h1>hi ' + user + '</h1><br><br>Could there be a hidden path?');
         }
 })
 
