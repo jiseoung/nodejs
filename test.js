@@ -19,7 +19,7 @@ app.get('/hi', (req,res) => {
             res.send('<h1>hi ' + user + '</h1><br><br>[secret address : /secret]');
         }
         else {
-            res.send('<h1>hi ' + user + '</h1><br><br>Could there be a hidden path?');
+            res.send('<h1>hi ' + user + '</h1><br><br>Maybe authorized user has a special address?');
         }
 })
 
